@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Camel
+Bundle-SymbolicName: com.lhq.plugin.transfer.camel;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: LHQ
+Automatic-Module-Name: com.lhq.plugin.transfer.camel
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.jface.text;bundle-version="3.16.400",
+ org.eclipse.wst.sse.ui;bundle-version="1.7.100"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8

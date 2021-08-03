@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="com.lhq.plugin.transfer.camel.commands.category"
+            name="Camel Category">
+      </category>
+      <command
+            categoryId="com.lhq.plugin.transfer.camel.commands.category"
+            id="com.lhq.plugin.transfer.camel.commands.camelCammand"
+            name="Camel Command">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            commandId="com.lhq.plugin.transfer.camel.commands.camelCammand"
+            class="com.lhq.plugin.transfer.camel.handler.CamelHandler">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="com.lhq.plugin.transfer.camel.commands.camelCammand"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="F10">
+      </key>
+   </extension>
+   
+   
+</plugin>
