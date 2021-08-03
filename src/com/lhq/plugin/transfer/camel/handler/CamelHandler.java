@@ -45,8 +45,7 @@ public class CamelHandler extends AbstractHandler {
 			return null;
 		}
 
-		String title = iep.getTitle();
-        TextProcessResult result = process(document.get(), selection.getOffset(), selection.getLength(), (title != null) && (title.endsWith(".java")));
+        TextProcessResult result = process(document.get(), selection.getOffset(), selection.getLength());
 		if (result == null) {
 			return null;
 		}
@@ -59,7 +58,7 @@ public class CamelHandler extends AbstractHandler {
 		return null;
 	}
 
-	protected TextProcessResult process(String text, int selectionOffset, int selectionLength, boolean isJavaFile) {
+    protected TextProcessResult process(String text, int selectionOffset, int selectionLength) {
 		if ((text == null) || (selectionOffset < 0) || (selectionLength <= 2)) {
 			return null;
 		}
